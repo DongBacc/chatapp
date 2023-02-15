@@ -1,0 +1,12 @@
+@mixin calc($property, $expression) {
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+.messages {
+    background-color: #ddddf7;
+    padding: 20px;
+    @include calc(height, '100% - 180px');
+    overflow: scroll;
+}
